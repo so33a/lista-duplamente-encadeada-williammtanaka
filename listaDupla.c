@@ -26,6 +26,20 @@ ListaDupla inicializa() {
   return aux;
 }
 
+
+link buscaNoMenorElemento (ListaDupla l) {
+  link m;
+  link t = l->head;+
+  m = t;  
+  while ( l->head == m ) {
+    if(t->item > m)
+      return t;
+    t = t->next;
+  }
+  return;
+}
+
+
 void insereDepois (ListaDupla l, link x, link t) {
   if (x == NULL) {
     l->head = t;
