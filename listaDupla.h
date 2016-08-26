@@ -16,6 +16,7 @@ typedef struct {
 ListaDupla inicializa();
 link novoNo (int item, link prev, link next);
 link buscar(ListaDupla l, int item);
+link buscaNoMenorElemento (ListaDupla l);
 void insereDepois (ListaDupla l, link x, link t);
 void insereAntes (ListaDupla l, link x, link t);
 link removeNo (link x);
