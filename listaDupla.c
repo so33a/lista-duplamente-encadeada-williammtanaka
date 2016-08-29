@@ -40,6 +40,22 @@ link buscaNoMenorElemento (ListaDupla l) {
 }
 
 
+ListaDupla ordenar (ListaDupla l){
+  ListaDupla ord = inicializa();
+  link t = l->head;
+  if (t == l->z)
+    return NULL;
+  else {
+    while(t != l->z){
+      insereDepois(ord, ord->z->prev, removeNo(buscaMenorItem(l)));
+      t = t->next;
+    }
+    destroiLista(l);
+    return ord;
+  }
+}
+
+
 void insereDepois (ListaDupla l, link x, link t) {
   if (x == NULL) {
     l->head = t;
