@@ -17,6 +17,10 @@ int main () {
   if((aux2 = buscar(l, 21) ) != NULL) 
     removeNo(aux2);
   imprime(l);
+  link m = buscaNoMenorElemento (l);
+  printf("O menor elemento da lista: %d\n", m->item);
+  ListaDupla ord = ordenar (l);
+  imprime(nova);
   destroiLista(l);
 
   return 0;
